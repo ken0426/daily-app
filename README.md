@@ -1,24 +1,20 @@
-# README
+# dailyのER図
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## usersテーブル
+| Column             | Type   | Options     |
+| -------------------| ------ | ----------- |
+|nickname            |string  |null: false  |
+|email               |string  |null: false  |
+|encrypted_password  |string  |null: false  |
 
-Things you may want to cover:
+### Association
+* has_many :contents
 
-* Ruby version
+## contentsテーブル
+| Column      | Type       | Options         |
+| ----------- | -----------| --------------- |
+|title        |string      |null: false      |
+|contents     |text        |null: false      |
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+* belongs_to :users
