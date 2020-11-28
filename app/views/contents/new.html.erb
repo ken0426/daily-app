@@ -1,0 +1,12 @@
+<%= render "shared/header" %>
+
+<div class="new-row">
+    <h2>new create</h2>
+    <div class="container">
+      <%= form_with(model: @content, local: true) do |form| %>
+        <%= form.text_field :title, placeholder: "タイトル" ,class:"title-area"%><br>
+        <%= form.text_area :contents, placeholder: "テキスト", rows: "10" ,class:"contents-area"%><br>
+        <%= form.submit "Create", class:"submit" %>
+      <% end %>
+    </div>
+</div>

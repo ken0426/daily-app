@@ -1,0 +1,8 @@
+<%= render "shared/header" %>
+
+<div class="show-box">
+<p class="day-times"><%= l @content.created_at, format: :short %></p> 
+<p class="title-show">〜<%= @content.title %>〜</p>
+<p class="contents-show"><%= @content.contents %></p>
+<%= link_to "edit", edit_content_path(@content.id), method: :get, class:"edit-btn" %>
+</div>

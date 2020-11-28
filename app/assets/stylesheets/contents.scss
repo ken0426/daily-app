@@ -1,3 +1,239 @@
 // Place all the styles related to the contents controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html{
+  body,
+  div,
+  dl,
+  dt,
+  dd,
+  ul,
+  ol,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  pre,
+  code,
+  form,
+  fieldset,
+  legend,
+  input,
+  textarea,
+  p,
+  blockquote,
+  th,
+  td {
+    margin:0;
+    padding:0;
+  }
+  }
+  
+  ol,
+  ul {
+    list-style:none;
+  }
+
+  a{
+    text-decoration: none;
+  }
+  
+  .main{
+    height: 100vh;
+  }
+
+  @keyframes content {
+    0% {
+      opacity: 0;
+      transform: translateY(70px);
+    }
+  }
+
+  body{
+    background-color: #414141;
+  }
+  
+.top-name{
+  text-align: center;
+  color: #E8E8E8;
+  font-family: "Apple Chancery";
+  margin: 30px 0;
+  font-size: 60px;
+}
+
+  .sign-box{
+    text-align: center;
+    background-color: #ADADAD;
+    width: 50%;
+    margin: 0 auto;
+    height: 280px;
+    padding: 60px;
+    animation: content 4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .account-btn{
+    color: #E8E8E8;
+    font-family: "Big Caslon";
+    margin: 0 0 50px 0;
+    font-size: 80px;
+    cursor:pointer;
+    display: inline-block;
+    transition-duration:1s;
+  }
+
+  .account-btn:hover{
+    font-size: 100px;
+    border-bottom: dotted 1px #fff;
+  }
+
+  .main-wraper{
+    margin: 0 auto;
+    width: 830px;
+    margin-top: 50px;
+    color: white;
+  }
+
+  .list-day-a{
+    color: white;
+  }
+
+  .new-edit{
+    display: block;
+    color: white;
+    width: 148px;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  .new-edit:hover{
+    border-bottom: snow 1px dashed;
+  }
+
+  .main-list{
+    text-align: left;
+    font-size: 22px;
+  }
+
+  .list-day{
+    margin: 10px 0;
+    padding-left: 18px;
+    transition-duration:0.2s;
+    cursor: pointer;
+  }
+
+  .main-list:hover{
+    font-size: 25px;
+    box-shadow: 0 0 8px gray;
+    border-radius: 20px;
+  }
+
+  .new-row{
+    margin: 0 auto;
+    margin-top: 45px;
+    width: 1000px;
+    height: 600px;
+    text-align: center;
+    color: snow;
+  }
+
+  .title-area{
+    width: 650px;
+    height: 30px;
+    margin: 30px 0 10px 0;
+  }
+
+  .contents-area{
+    width: 650px;
+    height: 370px;
+    margin: 10px 0;
+    resize: none;
+  }
+
+  .delete-btn{
+    display: inline-block;
+    line-height: 40px;
+    width: 150px;
+    height: 40px;
+    margin: 10px 0 30px 0;
+    background-color: #A29C9C;
+    color: wheat;
+    border: 0;
+    cursor: pointer;
+    transition-duration: 0.5s;
+  }
+
+  .delete-btn:hover{
+    border-radius: 30px;
+    color: #785050;
+  }
+
+  .submit{
+    width: 150px;
+    height: 40px;
+    margin: 10px 0 20px 0;
+    background-color: #A29C9C;
+    color: wheat;
+    border: 0;
+    cursor: pointer;
+    transition-duration: 0.5s;
+  }
+
+  .submit:hover{
+    border-radius: 30px;
+    color: #785050;
+  }
+
+  .show-box{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 50%;
+    color: white;
+  }
+
+  .day-times{
+    text-align: left;
+    font-size: 26px;
+  }
+
+  .title-show{
+    text-align: left;
+    margin: 30px 0;
+    font-size: 25px;
+  }
+  
+  .contents-show{
+    text-align: left;
+    font-size: 25px;
+    border: 6px outset white;
+    white-space: pre-wrap;
+  }
+
+  .edit-btn{
+    display: block;
+    text-align: center;
+    color: white;
+    background-color: #A29C9C;
+    font-size: 30px;
+    width: 100px;
+    height: 60px;
+    line-height:60px;
+    margin: 30px 0;
+    transition-duration: 0.5s;
+  }
+
+  .edit-btn:hover{
+    border-radius: 30px;
+    color: #785050;
+  }
