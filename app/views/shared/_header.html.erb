@@ -1,7 +1,8 @@
 <header class='top-header'>
-
-
-<p class="top-out">log out</p>
+<% if user_signed_in? %>
+  <%= link_to 'log out', destroy_user_session_path, method: :delete, class: "top-out" %>
+  <%# <p class="top-out">log out</p> %>
+<% end %>
 
 <p class="top-log"><%= link_to "Daily", root_path, class:"log" %></p>
  

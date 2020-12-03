@@ -1,6 +1,8 @@
 class ContentsController < ApplicationController
+  before_action :move_to_index, except: [:index]
+
   def index
-    @content = Content.all.order("created_at DESC")
+    @content = Content.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -10,6 +12,7 @@ class ContentsController < ApplicationController
   def create
     @content = Content.new(content_params)
     if @content.save
+    # binding.pry
       redirect_to root_path
     else
       render :new
@@ -21,9 +24,9 @@ class ContentsController < ApplicationController
   end
 
   def update
-    content = Content.find(params[:id])
-    content.update(content_params)
-    if content.save
+    @content = Content.find(params[:id])
+    @content.update(content_params)
+    if @content.save
       redirect_to content_path
     else
       render :edit
@@ -31,17 +34,23 @@ class ContentsController < ApplicationController
   end
 
   def destroy
-    content = Content.find(params[:id])
-    content.destroy
+    @content = Content.find(params[:id])
+    @content.destroy
     redirect_to root_path
   end
 
   def show
-    @content = Content.find(params[:id])
+      @content = Content.find(params[:id])
   end
 
   private
   def content_params
-    params.require(:content).permit(:title, :contents)
+    params.require(:content).permit(:title, :content).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
   end
 end

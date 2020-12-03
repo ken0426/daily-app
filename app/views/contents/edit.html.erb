@@ -1,13 +1,17 @@
 <%= render "shared/header" %>
 
-<div class="new-row">
-    <h2>Edit</h2>
-    <div class="container">
-      <%= form_with(model: @content, local: true) do |form| %>
-        <%= form.text_field :title, placeholder: "タイトル" ,class:"title-area"%><br>
-        <%= form.text_area :contents, placeholder: "テキスト", rows: "10" ,class:"contents-area"%><br>
-        <%= form.submit "Create", class:"submit" %><br>
-        <%= link_to "Delete", content_path(@content.id), method: :delete, class:"delete-btn"%>
-      <% end %>
-    </div>
-</div>
+<% if user_signed_in? && current_user.id == @content.user_id%>
+  <div class="new-row">
+      <h2>Edit</h2>
+      <div class="container">
+        <%= form_with(model: @content, local: true) do |form| %>
+          <% if user_signed_in? %>
+            <%= form.text_field :title, placeholder: "タイトル" ,class:"title-area"%><br>
+            <%= form.text_area :content, placeholder: "テキスト", rows: "10" ,class:"contents-area"%><br>
+          <% end %>
+            <%= form.submit "Create", class:"submit" %><br>
+            <%= link_to "Delete", content_path(@content.id), method: :delete, class:"delete-btn"%>
+        <% end %>
+      </div>
+  </div>
+<% end %>

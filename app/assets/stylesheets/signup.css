@@ -1,0 +1,38 @@
+.sign-up-box{
+  text-align: center;
+  opacity: 0.7;
+}
+
+.sign-up-name{
+  color: white;
+  margin: 30px 0 40px 0;
+  font-size: 45px;
+  font-weight: normal;
+}
+
+.sign-up-btn{
+  display: block;
+  margin: 0 auto;
+  width: 290px;
+  height: 35px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0 5px;
+  border: 0;
+}
+
+.sign-up-btn::placeholder{
+  text-align: center;
+}
+
+.submit-sign-up-btn{
+  display: block;
+  margin: 0 auto;
+  width: 140px;
+  height: 40px;
+  font-size: 22px;
+  background-color: #A29C9C;
+  border: 0;
+  color: white;
+  cursor: pointer; 
+}

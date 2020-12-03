@@ -54,7 +54,9 @@ html{
   }
 
   body{
-    background-color: #414141;
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/23/13/40/iphone-1852901_1280.jpg);
+    background-size: cover;
+    // background-color: #414141;
   }
   
 .top-name{
@@ -76,9 +78,11 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0.9;
   }
 
   .account-btn{
+    display: block;
     color: #E8E8E8;
     font-family: "Big Caslon";
     margin: 0 0 50px 0;
@@ -100,8 +104,13 @@ html{
     color: white;
   }
 
+  .list-day{
+    text-shadow:0 0 10px rgb(0, 0, 0);
+  }
+
   .list-day-a{
     color: white;
+    text-shadow:0 0 10px rgb(0, 0, 0);
   }
 
   .new-edit{
@@ -147,10 +156,22 @@ html{
     color: snow;
   }
 
+  .container{
+    opacity: 0.6;
+  }
+
   .title-area{
     width: 650px;
     height: 30px;
     margin: 30px 0 10px 0;
+    border: 0;
+    color: white;
+    background-color: #909090;
+  }
+
+  .title-area::placeholder{
+    text-align: center;
+    color: white;
   }
 
   .contents-area{
@@ -158,6 +179,13 @@ html{
     height: 370px;
     margin: 10px 0;
     resize: none;
+    color: white;
+    background-color: #909090;
+  }
+
+  .contents-area::placeholder{
+    text-align: center;
+    color: white;
   }
 
   .delete-btn{
@@ -200,24 +228,30 @@ html{
     margin-top: 40px;
     width: 50%;
     color: white;
+    opacity: 0.8;
   }
 
   .day-times{
     text-align: left;
+    width: 156px;
     font-size: 26px;
+    border-bottom: 2px dashed white;
   }
 
   .title-show{
     text-align: left;
     margin: 30px 0;
     font-size: 25px;
+    text-shadow:0 0 10px rgb(0, 0, 0);
   }
   
   .contents-show{
     text-align: left;
-    font-size: 25px;
+    font-size: 20px;
     border: 6px outset white;
     white-space: pre-wrap;
+    background-color: #909090;
+    padding: 10px 20px;
   }
 
   .edit-btn{
@@ -231,6 +265,7 @@ html{
     line-height:60px;
     margin: 30px 0;
     transition-duration: 0.5s;
+    opacity: 0.6;
   }
 
   .edit-btn:hover{

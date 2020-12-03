@@ -1,4 +1,9 @@
 class Content < ApplicationRecord
-  validates :title, presence: true
-  validates :contents, presence: true
+
+  with_options presence: true do
+    validates :title
+    validates :content
+  end
+  
+  belongs_to :user
 end

@@ -1,28 +1,30 @@
 <%= render "shared/header" %>
 
 <div class='main'>
+  <div class="main-wraper">
 
-<%# ログインしていなければ表示する %>
-<%# <h1 class="top-name">sign in</h1>
+    <% if user_signed_in? %>
+      <%= link_to "new create", new_content_path, class: "new-edit" %>
+    <% end %>
 
-<div class="sign-box">
-  <div class="account-btn">log in</div>
-  <div class="account-btn">new account</div>
-</div> %>
-<%# //ログインしていなければ表示する %>
+    <% @content.each do |content| %>
+      <% if user_signed_in? && current_user.id == content.user_id %>
+          <ul class="main-list">
+            <li class="list-day">
+              <%= l content.created_at, format: :short , class:"list-day-a"%> 
+              <%= link_to "#{content.title}", content_path(content.id), method: :get, class:"list-day-a"%>
+            </li>
+          </ul>
+      <% end %>
+    <% end %>
 
-<%# ログインしていれば表示する %>
-<div class="main-wraper">
-  <%= link_to "new create", new_content_path, class: "new-edit" %>
+  </div>
+  <% unless user_signed_in? %>
+    <h1 class="top-name">sign in</h1>
 
-  <% @content.each do |content| %>
-    <ul class="main-list">
-      <li class="list-day">
-        <%= l content.created_at,  format: :short %> 
-        <%= link_to "#{content.title}", content_path(content.id), method: :get, class:"list-day-a"%>
-      </li>
-    </ul>
-  <% end %>
+    <div class="sign-box">
+      <%= link_to 'log in', new_user_session_path, class: "account-btn" %>
+      <%= link_to 'new account', new_user_registration_path, class: "account-btn" %>
+    </div>
+   <% end %>
 </div>
-<%# //ログインしていれば表示する %>
-<%= render "shared/footer" %>
