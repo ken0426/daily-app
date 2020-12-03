@@ -12,7 +12,6 @@ class ContentsController < ApplicationController
   def create
     @content = Content.new(content_params)
     if @content.save
-    # binding.pry
       redirect_to root_path
     else
       render :new
