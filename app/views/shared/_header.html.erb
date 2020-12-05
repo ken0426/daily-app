@@ -1,7 +1,6 @@
 <header class='top-header'>
 <% if user_signed_in? %>
-  <%= link_to 'log out', destroy_user_session_path, method: :delete, class: "top-out" %>
-  <%# <p class="top-out">log out</p> %>
+  <%= link_to 'log out', destroy_user_session_path, method: :delete, data: { confirm: '本当にログアウトしますか？' } ,class: "top-out" %>
 <% end %>
 
 <p class="top-log"><%= link_to "Daily", root_path, class:"log" %></p>

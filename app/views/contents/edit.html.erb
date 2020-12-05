@@ -10,7 +10,7 @@
             <%= form.text_area :content, placeholder: "テキスト", rows: "10" ,class:"contents-area"%><br>
           <% end %>
             <%= form.submit "Create", class:"submit" %><br>
-            <%= link_to "Delete", content_path(@content.id), method: :delete, class:"delete-btn"%>
+            <%= link_to "Delete", content_path(@content.id), method: :delete, data: { confirm: '本当に削除しますか？' },class:"delete-btn"%>
         <% end %>
       </div>
   </div>
