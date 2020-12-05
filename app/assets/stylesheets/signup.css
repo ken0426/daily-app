@@ -35,4 +35,10 @@
   border: 0;
   color: white;
   cursor: pointer; 
+  transition-duration: 0.5s;
+}
+
+.submit-sign-up-btn:hover{
+  border-radius: 30px;
+  color: #785050;
 }
