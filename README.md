@@ -7,7 +7,7 @@
 - ログインとログアウトができる
 
 ## 本番環境
-- URL
+- https://daily-30575-app.herokuapp.com/
 - テストアカウント（メールアドレス：test197@sample.com , パスワード：123asd）
 
 ## このアプリを作成した意図
