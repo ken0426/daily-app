@@ -6,19 +6,18 @@
     <% if user_signed_in? %>
       <%= link_to "new create", new_content_path, class: "new-edit" %>
       <div class="scroll" id="scroll">
-    <% end %>
-
-      <% @content.each do |content| %>
-        <% if user_signed_in? && current_user.id == content.user_id %>
-              <ul class="main-list">
-                <li class="list-day">
-                  <%= link_to  "#{l content.created_at, format: :short}", content_path(content.id), method: :get, class:"list-day-a"%> 
-                  <%= link_to "#{content.title}", content_path(content.id), method: :get, class:"list-day-a"%>
-                </li>
-              </ul>
+        <% @content.each do |content| %>
+          <% if user_signed_in? && current_user.id == content.user_id %>
+                <ul class="main-list">
+                  <li class="list-day">
+                    <%= link_to  "#{l content.created_at, format: :short}", content_path(content.id), method: :get, class:"list-day-a"%> 
+                    <%= link_to "#{content.title}", content_path(content.id), method: :get, class:"list-day-a"%>
+                  </li>
+                </ul>
+          <% end %>
         <% end %>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
 
   </div>
   <% unless user_signed_in? %>
