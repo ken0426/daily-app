@@ -62,9 +62,9 @@
     }
 
     .submit-login-btn:hover{
-      border-radius: none;
-      color: none;
-    }
+      border-radius: 0px;
+      color: white;
+     }
   }
 
    /* ===================================================== */
@@ -88,6 +88,10 @@
        width: 35vw;
        height: 7vh;
        font-size: 33px;
+     }
+     .submit-login-btn:hover{
+      border-radius: 0px;
+      color: white;
      }
    }
    /* ===================================================== */

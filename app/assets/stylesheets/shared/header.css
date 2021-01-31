@@ -41,7 +41,14 @@
 
 @media screen and (max-width: 414px){
 .top-out:hover{
-  opacity: none;
-  font-size: none;
+  opacity: 1;
+  font-size: 20px;
 }
 }
+
+@media screen and (min-width: 700px) and (max-width: 1024px){
+  .top-out:hover{
+    opacity: 1;
+    font-size: 20px;
+  }
+  }

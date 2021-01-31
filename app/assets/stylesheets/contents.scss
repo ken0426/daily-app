@@ -200,7 +200,7 @@ html{
     height: 40px;
     margin: 10px 0 30px 0;
     background-color: #A29C9C;
-    color: wheat;
+    color: white;
     border: 0;
     cursor: pointer;
     transition-duration: 0.5s;
@@ -216,7 +216,7 @@ html{
     height: 40px;
     margin: 10px 0 20px 0;
     background-color: #A29C9C;
-    color: wheat;
+    color: white;
     border: 0;
     cursor: pointer;
     transition-duration: 0.5s;
@@ -277,10 +277,6 @@ html{
     border-radius: 30px;
     color: #785050;
   }
-
-  // input{
-  //   display: none;
-  // }
 
   // ===============iPhone8Pulsまでの画面サイズ=================
   @media screen and (max-width: 414px){
@@ -367,6 +363,26 @@ html{
       border-radius: none;
       color: none;
     }
+    .new-edit:hover{
+      border-bottom: 0;
+    }
+    .main-list:hover{
+      font-size: 22px;
+      box-shadow: none;
+      border-radius: 0px;
+    }
+    .edit-btn:hover{
+      border-radius: 0px;
+      color:white;
+    }
+    .submit:hover{
+      border-radius: 0px;
+      color: white;
+    }
+    .delete-btn:hover{
+      border-radius: 0px;
+      color: white;
+    }
   }
   // =====================================================
   // ===============iPadからiPadProまでの画面サイズ===========
@@ -391,6 +407,22 @@ html{
       height: 70vh;
       overflow: auto;
       width: 80%;
+    }
+    .new-edit:hover{
+      border-bottom: 0;
+    }
+    .main-list:hover{
+      font-size: 22px;
+      box-shadow: none;
+      border-radius: 0px;
+    }
+    .edit-btn:hover{
+      border-radius: 0px;
+      color:white;
+    }
+    .delete-btn:hover{
+      border-radius: 0px;
+      color: white;
     }
   }
   // =====================================================
