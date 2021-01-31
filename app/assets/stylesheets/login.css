@@ -42,3 +42,52 @@
   border-radius: 30px;
   color: #785050;
 }
+
+/* ===============iPhoneX以降画面サイズ================= */
+  @media screen and (max-width: 414px){
+    .main{
+      margin-top: 20px;
+    }
+
+    .login-btn{
+      height: 50px;
+      margin: 0 auto;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .submit-login-btn{
+      height: 50px;
+      width: 150px;
+    }
+
+    .submit-login-btn:hover{
+      border-radius: none;
+      color: none;
+    }
+  }
+
+   /* ===================================================== */
+   /* ===============iPadからiPadProまでの画面サイズ=========== */
+   @media screen and (min-width: 700px) and (max-width: 1024px){
+     .login-box{
+       margin-top: 150px;
+     }
+     .login-name{
+       font-size: 60px;
+     }
+     .login-btn{
+       width: 70vw;
+       margin: 0 auto;
+       margin-top: 40px;
+       margin-bottom: 40px;
+       height: 60px;
+       font-size: 25px;
+     }
+     .submit-login-btn{
+       width: 35vw;
+       height: 7vh;
+       font-size: 33px;
+     }
+   }
+   /* ===================================================== */

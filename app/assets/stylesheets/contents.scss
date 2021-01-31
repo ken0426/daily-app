@@ -44,6 +44,7 @@ html{
   
   .main{
     height: 100vh;
+    height: auto;
   }
 
   @keyframes content {
@@ -56,7 +57,6 @@ html{
   body{
     background-image: url(https://cdn.pixabay.com/photo/2016/11/23/13/40/iphone-1852901_1280.jpg);
     background-size: cover;
-    // background-color: #414141;
   }
   
 .top-name{
@@ -102,6 +102,11 @@ html{
     width: 830px;
     margin-top: 50px;
     color: white;
+  }
+
+  .scroll.show{
+    height: 430px;
+    overflow: auto;
   }
 
   .list-day{
@@ -272,3 +277,116 @@ html{
     border-radius: 30px;
     color: #785050;
   }
+
+  // ===============iPhone8Pulsまでの画面サイズ=================
+  @media screen and (max-width: 414px){
+    body{
+      background-size: cover;
+      height: 100vh;
+    }
+    .main{
+      height: auto;
+      margin-top: 20px;
+    }
+    .main-wraper{
+      width: auto;
+      margin-top: 0;
+    }
+    .main-list:hover{
+      font-size: none;
+      box-shadow: none;
+      border-radius: none;
+    }
+    .scroll.show{
+      height: 58vh;
+      overflow: auto;
+    }
+    .sign-box{
+      height: 100%;
+      padding: 10px;
+      width: 80%;
+    }
+
+    .account-btn{
+      font-size: 35px;
+      margin: 15px 0;
+    }
+
+    .account-btn:hover{
+      font-size: none;
+      border-bottom: none;
+    }
+
+    .new-edit{
+      height: 39px;
+    }
+
+    .new-edit:hover{
+      border-bottom: none;
+    }
+
+    .list-day{
+      margin: 20px 0;
+    }
+    .list-day-a{
+      display: block;
+    }
+
+    .show-box{
+      height: 70vh;
+      overflow: auto;
+      width: 80%;
+    }
+    
+    .contents-show{
+      font-size: 15px;
+    }
+
+    .new-row{
+      width: 80%;
+      height: 70vh;
+    }
+
+    .container{
+      width: 80vw;
+    }
+
+    .title-area{
+      width: 80vw;
+    }
+
+    .contents-area{
+      width: 80vw;
+      height: 30vh;
+    }
+    .delete-btn:hover{
+      border-radius: none;
+      color: none;
+    }
+  }
+  // =====================================================
+  // ===============iPadからiPadProまでの画面サイズ===========
+  @media screen and (min-width: 700px) and (max-width: 1024px){
+    body{
+      background-size: cover;
+      height: 100vh;
+    }
+    .scroll.show{
+      height: 58vh;
+      overflow: auto;
+    }
+    .sign-box{
+      height: 100%;
+      padding: 10px;
+      width: 80%;
+    }
+    .main{
+      height: auto;
+    }
+    .show-box{
+      height: 70vh;
+      overflow: auto;
+      width: 80%;
+    }
+  }
+  // =====================================================

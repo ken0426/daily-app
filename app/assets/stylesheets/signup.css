@@ -42,3 +42,35 @@
   border-radius: 30px;
   color: #785050;
 }
+
+/* ===============iPhoneX以降画面サイズ================= */
+@media screen and (max-width: 414px){
+  .sign-up-btn{
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+/* ===================================================== */
+
+/* ===============iPadからiPadProまでの画面サイズ=========== */
+@media screen and (min-width: 700px) and (max-width: 1024px){
+  .sign-up-name{
+    font-size: 53px;
+  }
+  .sign-up-btn{
+    width: 70vw;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 60px;
+    font-size: 25px;
+  }
+  .submit-sign-up-btn{
+    width: 35vw;
+    height: 7vh;
+    font-size: 33px;
+  }
+}
+/* ===================================================== */

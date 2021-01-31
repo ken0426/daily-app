@@ -37,3 +37,11 @@
 .log{
   color: #E8E8E8;
 }
+
+
+@media screen and (max-width: 414px){
+.top-out:hover{
+  opacity: none;
+  font-size: none;
+}
+}
