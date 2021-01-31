@@ -283,7 +283,7 @@ html{
   // }
 
   // ===============iPhone8Pulsまでの画面サイズ=================
-  @media screen and (max-width: 414px){
+  @media screen and (max-width: 414px) and (hover:none){
     body{
       background-size: cover;
       height: 100vh;
