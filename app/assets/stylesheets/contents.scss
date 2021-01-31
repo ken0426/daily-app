@@ -277,6 +277,10 @@ html{
     border-radius: 30px;
     color: #785050;
   }
+  .scroll{
+    height: 58vh;
+    overflow: auto;
+  }
 
   // ===============iPhone8Pulsまでの画面サイズ=================
   @media screen and (max-width: 414px){
