@@ -5,9 +5,9 @@
 
     <% if user_signed_in? %>
       <%= link_to "new create", new_content_path, class: "new-edit" %>
+      <div class="scroll" id="scroll">
     <% end %>
 
-    <div class="scroll">
       <% @content.each do |content| %>
         <% if user_signed_in? && current_user.id == content.user_id %>
               <ul class="main-list">
