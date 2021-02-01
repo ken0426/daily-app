@@ -14,4 +14,7 @@ class User < ApplicationRecord
          end
 
          has_many :content
+
+         has_one_attached :avatar
+
 end
